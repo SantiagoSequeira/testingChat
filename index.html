@@ -11,10 +11,11 @@
 		.embeddedServiceHelpButton .helpButton .uiButton:focus {
 			outline: 1px solid #005290;
 		}
-</style>
+	</style>
 </head>
 <body>	
-	<h6>Hol3</h6>
+	<h6>Hol4</h6>
+
 
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
@@ -42,25 +43,25 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://santiagosequeira-dev-ed.my.salesforce.com',
-			'https://santiagosequeira1998-developer-edition.na174.force.com',
+			'https://brave-raccoon-hexe61-dev-ed.my.salesforce.com',
+			'https://chat-santiagosequeira-developer-edition.na134.force.com/liveAgentSetupFlow',
 			gslbBaseURL,
-			'00D6g000003Nzpo',
+			'00D4R0000007tWz',
 			'chatTeam',
 			{
-				baseLiveAgentContentURL: 'https://c.la1-c2-ia5.salesforceliveagent.com/content',
-				deploymentId: '5726g000000dEhE',
-				buttonId: '5736g000000dG1i',
-				baseLiveAgentURL: 'https://d.la1-c2-ia5.salesforceliveagent.com/chat',
+				baseLiveAgentContentURL: 'https://c.la1-c2-ia4.salesforceliveagent.com/content',
+				deploymentId: '5724R000000c2nq',
+				buttonId: '5734R000000c31K',
+				baseLiveAgentURL: 'https://d.la1-c2-ia4.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'chatTeam',
-				isOfflineSupportEnabled: false
+				isOfflineSupportEnabled: true
 			}
 		);
 	};
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://santiagosequeira-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://brave-raccoon-hexe61-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
