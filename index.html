@@ -82,18 +82,16 @@
 </head>
 <body>
     <script>
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", 'https://d.la1-c2-ia4.salesforceliveagent.com/chat/rest/System/SessionId', true);
-
-        //Send the proper header information along with the request
-        xhr.setRequestHeader("X-LIVEAGENT-API-VERSION", "48");
-        xhr.setRequestHeader("X-LIVEAGENT-AFFINITY", "null");
-        xhr.onreadystatechange = function() { // Call a function when the state changes.
-            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-                console.log(xhr.response);
-            }
-        }
-        xhr.send();
+        fetch('https://d.la1-c2-ia4.salesforceliveagent.com/chat/rest/System/SessionId', {
+		  method: 'GET', // or 'PUT'
+		  headers:{
+		    'Content-Type': 'application/json',
+		    'X-LIVEAGENT-API-VERSION': '48',
+		    'X-LIVEAGENT-AFFINITY': null
+		  }
+		}).then(res => console.log(res))
+		.catch(error => console.error('Error:', error))
+		.then(response => console.log('Success:', response));
     </script>
     
 </body>
